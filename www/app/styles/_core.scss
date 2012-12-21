@@ -1,0 +1,195 @@
+// Core styles for the app.
+
+@import "base";
+@import "vendor/h5bp";
+
+// H5BP stuff
+@include h5bp-normalize;
+@include h5bp-base-styles;
+@include h5bp-helpers;
+
+/*************** Core layout ***************/
+
+* {
+  // apply a natural box layout model to all elements
+  // http://paulirish.com/2012/box-sizing-border-box-ftw/
+  @include box-sizing(border-box);
+
+  // Disable long tap to copy/paste, except on input fields
+  &:not(input), &:not(textarea), &:not(select) {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+  }
+  
+  // Disable grey highlight on any anchor or element with click handler
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+// Ensure the app fills the screen
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+#app {
+  min-height: 100%;
+  position: relative;
+}
+
+body {
+  background-color: $background-colour;
+}
+
+
+/*************** Forms ***************/
+
+// Thanks to 37Signals
+// http://37signals.com/svn/posts/2609-customizing-web-forms-with-css3-and-webkit/
+input, textarea, select {
+  border: 1px solid #555;
+  padding: 0.5em;
+  font-size: 14px;
+  line-height: 1.2em;
+  width: 80%;
+  background: #fff;
+  @include border-radius(0.5em);
+
+  // Allow form field selection!
+  -webkit-user-select: text;
+}
+
+// Remove padding on buttons so they can be styled easily
+button {
+  padding: 0;
+}
+
+select {
+  height: 2.5em;
+}
+
+input, textarea {
+  @include appearance(none);
+}
+
+input[type=checkbox],
+input[type=radio] {
+ display: inline-block;
+ font-size: 15px;
+ line-height: 1em;
+ margin: 0 0.25em 0 0;
+ padding: 0;
+ width: 2em;
+ height: 2em;
+ @include border-radius(0.25em);
+ vertical-align: text-top;
+}
+
+input[type=radio] {
+  @include border-radius(2em); /* Make radios round */
+}
+
+input[type=checkbox]:checked {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABOJJREFUeNrsm01IVFEUx6+jIBl9TTWkSZrmqGFh9EGRERWki9wEgS1y074JF30sosJNtgiVVoEEuUgIIlCiKNqolFa4UMwKKyOttIyKrECx83/c+zpzm0nH8X3pHDi8Gd+bmfebc87/nnPVpMnJSTGfzCfmmSWAE8BzzFLifYPKijJHAa413UlE2NIIO22UYWfpsIu8laJ9fi5HeCd5B/k58n04EnzHVC9KirfxqK+9aDvpk0cPaukQwuO0hYtE5ppc8e5tvxj78R0/ClGk6+dEShMoonqJfBuer8rIMmBh6Rnjov9lj5Dp7X1ggj0r09eIanZOgXGEffk8LN687lOXtnpatAg0jQ4N5BV6VGEDr/rEyPCQetr0v3R2PTDBFtHhJnleckqKyM0rEouX+I1zv3//FP0velTdTpBXTQXramCCPUCHW+TJgMzKyRepqQuMc4B8/qxLTIyP42kn+VGC7fHsOszrdWUgg2ALzHOoVylORgpL2DHPdlocFrXKYT8MDXDYui3b9x6OBdZ1ESbY60qcgoXFZr3CsM4CWFqIYOtn8hkpLgE1lVgXpwhKXE6wLZ7tpSUslLgUsPmFm8z1VYOFEu8m2HbPDg8cFgocXF9sKnEE2GKC7Yn3M50WrQY7YR0FVgKFNNZhIVBWwDoGLKedClWzHBZKzNR492zCOgJMsMfUaKcLFJoKRJepcftsf77PZli0i3V4jKWHw6JdZE1FKJ6lxxXAcpZtVh3UsuUB85waBFgHVW/Vffhsgl1Nh6tqvINzAyygye4S7HEr78WuCGP5yUP3xGdZpchyxMPUc9DqG/HZEN1atdaibrlBpJgiV1F0x6y+nyk7rcqKMtTeSblXtJS8jfz+dLZEpUgZipwbLBJYhnjdsm2ZkBWKHDMwwZq7g8xK4HRuB1IwWlR43SKNuSKrupUDfJOVIjVtYLnHa+4OppMjQt++jlLb9xwRKpV9cNl/6nYF1FgXKa1uj9q5NPqiwCIVtyEq6zdsNSKk0hHCw1rBUlmjUes2e21B2DmA2l230xEt1KvwU3T0VIQZAhQ0BSgk11i+3kasW5XKbL1tFzZbNOBWlXrdXQ9V+oUZvgiWqifZqQuqDPQvC+8n19s2q9fbmIBJgdHWlePGcIPYIZQ3GmaqrnEtRfaI3I8qQQbo662WyqecmtKirsOAJkdqN0FNWSqaBtjMNevU00PkZ/AAW6q6saHAkVSOpfGAinYiQmxfyTS/P2BGGd8BtlX5fhQMr4O6k710MrrTApbboJeNWXVwQK2dYVFeGVgdKeKG4Xq8Tlo1RfeXq4EldCMae9Tx+791+E8tA1ZXZVzPBoNGpzcNY+mlq1X/G6mWAY101qM7MjwY9nrPAFOU25VqR6plvZtS0ZUl0OykUMUzLV0xROjj4JQXatGtES6xmIBlLRuKLVU3qo2ODrsuujOdh29Hq2VuTJlvCBfZTIABMIE61pcoZYg+ayEbPQ1Mad2rohxpiVKNhrT7wmU20y2emkhpjdru7X6sfv5JiZzngeUS9RRpqyYpDAaAZYP9Hkrn924Djue3h9jb2jwqf1vAVLvOqdHPamCIV4iNfBgMqshbaEy0EeGELTWs0hobeqfJ95NvBKxwucW1Ly2hscNxj/yX8IDNu7+XTkr8G08COAGcAPaS/RFgAE+yYfmhJZIUAAAAAElFTkSuQmCC);
+  @include background-size(30px 30px);
+}
+
+// Override searchbar css from the normalise script
+// Stops iOS applying really rounded corners to the textfield
+input[type="search"] {
+  @include appearance(none);
+  @include box-sizing(border-box);
+}
+
+
+/*************** Lists ***************/
+
+// Disable default list styling so that nav lists look native-y
+.list {
+  @include list-style-reset;
+
+  li + li {
+    border-top: 1px solid #bbb;
+  }
+
+  li.active {
+    background-color: $list-active-background-color;
+    color: $list-active-text-colour;
+  }
+
+  a {
+    display: block;
+    height: 44px;
+    line-height: 44px;
+    padding: 0 10px;
+    text-decoration: none;
+    &:link, &:visited, &:hover, &:active {
+      color: inherit;
+    }
+  }
+
+}
+
+
+/*************** Toolbars ***************/
+
+$toolbar-default-height: 44px;
+$toolbar-default-font-size: 20px;
+
+$headerbar-height: $toolbar-default-height !default;
+$headerbar-font-size: $toolbar-default-font-size !default;
+$footerbar-height: $toolbar-default-height !default;
+$footerbar-font-size: $toolbar-default-font-size !default;
+
+
+// By default, the toolbars are inline.
+.toolbar {
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+  margin: 0;
+}
+
+#headerbar {
+  top: 0;
+  height: $headerbar-height;
+  background-color: $headerbar-background-colour;
+  color: $headerbar-text-colour;
+  .headerbar-title {
+    margin: 0;
+    padding: 0 10px;
+    line-height: $headerbar-height;
+    font-size: $headerbar-font-size;
+  }
+}
+
+#footerbar {
+  bottom: 0;
+  height: $footerbar-height;
+  .footerbar-title {
+    margin: 0;
+    padding: 0 10px;
+    line-height: $footerbar-height;
+    font-size: $footerbar-font-size;
+  }
+}
+
+#main {
+  z-index: 1;
+  padding-top: $headerbar-height;
+  padding-bottom: $footerbar-height;
+}
+
+// Adding the .fixedbar class to the html element will fix the toolbars using position:fixed.
+// This is supported on most recent mobile OS, except when we have input fields on the page.
+// In this case, it is recommended to disable the fixed bars by temporarily removing the
+// .fixedbar class.
+
+.fixedbar {
+  #headerbar, #footerbar {
+    position: fixed;
+  }
+
+  #main {
+    overflow: auto;
+  }
+}

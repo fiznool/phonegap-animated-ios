@@ -1,0 +1,629 @@
+/* Base styles defined in common 'core' partial */
+/* line 32, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/* line 39, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_normalize.scss */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+/* line 47, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/* line 55, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_normalize.scss */
+[hidden] {
+  display: none;
+}
+
+/* line 69, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_normalize.scss */
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* line 82, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_normalize.scss */
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+
+/* line 88, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_normalize.scss */
+body {
+  margin: 0;
+}
+
+/* line 103, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_normalize.scss */
+a:focus {
+  outline: thin dotted;
+}
+
+/* line 109, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_normalize.scss */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* line 122, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* line 127, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_normalize.scss */
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+
+/* line 132, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_normalize.scss */
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+
+/* line 137, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_normalize.scss */
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+
+/* line 142, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_normalize.scss */
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+
+/* line 147, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_normalize.scss */
+h6 {
+  font-size: 0.75em;
+  margin: 2.33em 0;
+}
+
+/* line 153, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/* line 159, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_normalize.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/* line 163, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_normalize.scss */
+blockquote {
+  margin: 1em 40px;
+}
+
+/* line 168, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_normalize.scss */
+dfn {
+  font-style: italic;
+}
+
+/* line 173, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_normalize.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/* line 180, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_normalize.scss */
+p,
+pre {
+  margin: 1em 0;
+}
+
+/* line 188, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  _font-family: 'courier new', monospace;
+  font-size: 1em;
+}
+
+/* line 195, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_normalize.scss */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* line 202, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_normalize.scss */
+q {
+  quotes: none;
+}
+
+/* line 208, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_normalize.scss */
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+/* line 214, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_normalize.scss */
+small {
+  font-size: 80%;
+}
+
+/* line 220, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 227, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 231, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 245, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_normalize.scss */
+dl,
+menu,
+ol,
+ul {
+  margin: 1em 0;
+}
+
+/* line 249, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_normalize.scss */
+dd {
+  margin: 0 0 0 40px;
+}
+
+/* line 256, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_normalize.scss */
+menu,
+ol,
+ul {
+  padding: 0 0 0 40px;
+}
+
+/* line 268, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_normalize.scss */
+img {
+  border: 0;
+  /* 1 */
+  -ms-interpolation-mode: bicubic;
+  /* 2 */
+}
+
+/* line 274, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* line 285, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_normalize.scss */
+figure {
+  margin: 0;
+}
+
+/* line 296, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_normalize.scss */
+form {
+  margin: 0;
+}
+
+/* line 301, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/* line 310, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_normalize.scss */
+legend {
+  border: 0;
+  padding: 0;
+  white-space: normal;
+  *margin-left: -7px;
+}
+
+/* line 323, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_normalize.scss */
+input,
+select,
+textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle;
+}
+
+/* line 333, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_normalize.scss */
+button,
+input {
+  line-height: normal;
+}
+
+/* line 347, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_normalize.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+  *overflow: visible;
+}
+
+/* line 355, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_normalize.scss */
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+
+/* line 364, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_normalize.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+  *height: 13px;
+  *width: 13px;
+}
+
+/* line 374, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/* line 384, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_normalize.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* line 390, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 397, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_normalize.scss */
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+/* line 409, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 22, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_main.scss */
+html,
+button,
+input,
+select,
+textarea {
+  color: #222222;
+}
+
+/* line 26, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_main.scss */
+body {
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/* line 34, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_main.scss */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/* line 39, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_main.scss */
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/* line 45, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_main.scss */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/* line 55, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_main.scss */
+img {
+  vertical-align: middle;
+}
+
+/* line 60, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_main.scss */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 67, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_main.scss */
+textarea {
+  resize: vertical;
+}
+
+/* line 7, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_helpers.scss */
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  *text-indent: -9999px;
+}
+/* line 27, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_helpers.scss */
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 100%;
+}
+
+/* line 9, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_helpers.scss */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+/* line 11, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_helpers.scss */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+/* line 67, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_helpers.scss */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/* line 13, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_helpers.scss */
+.invisible {
+  visibility: hidden;
+}
+
+/* line 93, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_helpers.scss */
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+/* line 98, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_helpers.scss */
+.clearfix:after {
+  clear: both;
+}
+/* line 104, /home/fiznool/dev/mbb/app/styles/vendor/h5bp/_helpers.scss */
+.clearfix {
+  *zoom: 1;
+}
+
+/*************** Core layout ***************/
+/* line 13, ../../app/styles/_core.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+/* line 19, ../../app/styles/_core.scss */
+*:not(input), *:not(textarea), *:not(select) {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+}
+
+/* line 29, ../../app/styles/_core.scss */
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 34, ../../app/styles/_core.scss */
+#app {
+  min-height: 100%;
+  position: relative;
+}
+
+/* line 39, ../../app/styles/_core.scss */
+body {
+  background-color: #efefef;
+}
+
+/*************** Forms ***************/
+/* line 48, ../../app/styles/_core.scss */
+input, textarea, select {
+  border: 1px solid #555;
+  padding: 0.5em;
+  font-size: 14px;
+  line-height: 1.2em;
+  width: 80%;
+  background: #fff;
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  border-radius: 0.5em;
+  -webkit-user-select: text;
+}
+
+/* line 62, ../../app/styles/_core.scss */
+button {
+  padding: 0;
+}
+
+/* line 66, ../../app/styles/_core.scss */
+select {
+  height: 2.5em;
+}
+
+/* line 70, ../../app/styles/_core.scss */
+input, textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* line 75, ../../app/styles/_core.scss */
+input[type=checkbox],
+input[type=radio] {
+  display: inline-block;
+  font-size: 15px;
+  line-height: 1em;
+  margin: 0 0.25em 0 0;
+  padding: 0;
+  width: 2em;
+  height: 2em;
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  border-radius: 0.25em;
+  vertical-align: text-top;
+}
+
+/* line 87, ../../app/styles/_core.scss */
+input[type=radio] {
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+  border-radius: 2em;
+  /* Make radios round */
+}
+
+/* line 91, ../../app/styles/_core.scss */
+input[type=checkbox]:checked {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABOJJREFUeNrsm01IVFEUx6+jIBl9TTWkSZrmqGFh9EGRERWki9wEgS1y074JF30sosJNtgiVVoEEuUgIIlCiKNqolFa4UMwKKyOttIyKrECx83/c+zpzm0nH8X3pHDi8Gd+bmfebc87/nnPVpMnJSTGfzCfmmSWAE8BzzFLifYPKijJHAa413UlE2NIIO22UYWfpsIu8laJ9fi5HeCd5B/k58n04EnzHVC9KirfxqK+9aDvpk0cPaukQwuO0hYtE5ppc8e5tvxj78R0/ClGk6+dEShMoonqJfBuer8rIMmBh6Rnjov9lj5Dp7X1ggj0r09eIanZOgXGEffk8LN687lOXtnpatAg0jQ4N5BV6VGEDr/rEyPCQetr0v3R2PTDBFtHhJnleckqKyM0rEouX+I1zv3//FP0velTdTpBXTQXramCCPUCHW+TJgMzKyRepqQuMc4B8/qxLTIyP42kn+VGC7fHsOszrdWUgg2ALzHOoVylORgpL2DHPdlocFrXKYT8MDXDYui3b9x6OBdZ1ESbY60qcgoXFZr3CsM4CWFqIYOtn8hkpLgE1lVgXpwhKXE6wLZ7tpSUslLgUsPmFm8z1VYOFEu8m2HbPDg8cFgocXF9sKnEE2GKC7Yn3M50WrQY7YR0FVgKFNNZhIVBWwDoGLKedClWzHBZKzNR492zCOgJMsMfUaKcLFJoKRJepcftsf77PZli0i3V4jKWHw6JdZE1FKJ6lxxXAcpZtVh3UsuUB85waBFgHVW/Vffhsgl1Nh6tqvINzAyygye4S7HEr78WuCGP5yUP3xGdZpchyxMPUc9DqG/HZEN1atdaibrlBpJgiV1F0x6y+nyk7rcqKMtTeSblXtJS8jfz+dLZEpUgZipwbLBJYhnjdsm2ZkBWKHDMwwZq7g8xK4HRuB1IwWlR43SKNuSKrupUDfJOVIjVtYLnHa+4OppMjQt++jlLb9xwRKpV9cNl/6nYF1FgXKa1uj9q5NPqiwCIVtyEq6zdsNSKk0hHCw1rBUlmjUes2e21B2DmA2l230xEt1KvwU3T0VIQZAhQ0BSgk11i+3kasW5XKbL1tFzZbNOBWlXrdXQ9V+oUZvgiWqifZqQuqDPQvC+8n19s2q9fbmIBJgdHWlePGcIPYIZQ3GmaqrnEtRfaI3I8qQQbo662WyqecmtKirsOAJkdqN0FNWSqaBtjMNevU00PkZ/AAW6q6saHAkVSOpfGAinYiQmxfyTS/P2BGGd8BtlX5fhQMr4O6k710MrrTApbboJeNWXVwQK2dYVFeGVgdKeKG4Xq8Tlo1RfeXq4EldCMae9Tx+791+E8tA1ZXZVzPBoNGpzcNY+mlq1X/G6mWAY101qM7MjwY9nrPAFOU25VqR6plvZtS0ZUl0OykUMUzLV0xROjj4JQXatGtES6xmIBlLRuKLVU3qo2ODrsuujOdh29Hq2VuTJlvCBfZTIABMIE61pcoZYg+ayEbPQ1Mad2rohxpiVKNhrT7wmU20y2emkhpjdru7X6sfv5JiZzngeUS9RRpqyYpDAaAZYP9Hkrn924Djue3h9jb2jwqf1vAVLvOqdHPamCIV4iNfBgMqshbaEy0EeGELTWs0hobeqfJ95NvBKxwucW1Ly2hscNxj/yX8IDNu7+XTkr8G08COAGcAPaS/RFgAE+yYfmhJZIUAAAAAElFTkSuQmCC);
+  -webkit-background-size: 30px 30px;
+  -moz-background-size: 30px 30px;
+  background-size: 30px 30px;
+}
+
+/* line 98, ../../app/styles/_core.scss */
+input[type="search"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*************** Lists ***************/
+/* line 107, ../../app/styles/_core.scss */
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 110, ../../app/styles/_core.scss */
+.list li + li {
+  border-top: 1px solid #bbb;
+}
+/* line 114, ../../app/styles/_core.scss */
+.list li.active {
+  background-color: #03ba8e;
+  color: #f0f0f0;
+}
+/* line 119, ../../app/styles/_core.scss */
+.list a {
+  display: block;
+  height: 44px;
+  line-height: 44px;
+  padding: 0 10px;
+  text-decoration: none;
+}
+/* line 125, ../../app/styles/_core.scss */
+.list a:link, .list a:visited, .list a:hover, .list a:active {
+  color: inherit;
+}
+
+/*************** Toolbars ***************/
+/* line 145, ../../app/styles/_core.scss */
+.toolbar {
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+  margin: 0;
+}
+
+/* line 152, ../../app/styles/_core.scss */
+#headerbar {
+  top: 0;
+  height: 44px;
+  background-color: #028868;
+  color: #f0f0f0;
+}
+/* line 157, ../../app/styles/_core.scss */
+#headerbar .headerbar-title {
+  margin: 0;
+  padding: 0 10px;
+  line-height: 44px;
+  font-size: 20px;
+}
+
+/* line 165, ../../app/styles/_core.scss */
+#footerbar {
+  bottom: 0;
+  height: 0;
+}
+/* line 168, ../../app/styles/_core.scss */
+#footerbar .footerbar-title {
+  margin: 0;
+  padding: 0 10px;
+  line-height: 0;
+  font-size: 20px;
+}
+
+/* line 176, ../../app/styles/_core.scss */
+#main {
+  z-index: 1;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* line 188, ../../app/styles/_core.scss */
+.fixedbar #headerbar, .fixedbar #footerbar {
+  position: fixed;
+}
+/* line 192, ../../app/styles/_core.scss */
+.fixedbar #main {
+  overflow: auto;
+}
+
+/* Module Styles go here */
+/* line 3, ../../app/styles/modules/_hello.scss */
+.detail {
+  margin: 10px;
+}

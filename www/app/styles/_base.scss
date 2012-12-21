@@ -1,0 +1,38 @@
+// Base partial.
+// This file should be included by every module.
+// For this reason, it should contain definitions only - no explicit styles.
+// Otherwise, these styles will be repeated within the stylesheet.
+
+$legacy-support-for-ie: false;
+$legacy-support-for-mozilla: false;
+
+$experimental-support-for-opera: false;
+$experimental-support-for-microsoft: false;
+
+// Variables go first - use to override any in imports below
+$background-colour: #efefef;
+$headerbar-background-colour: #028868;
+$headerbar-text-colour: #f0f0f0;
+$list-active-background-color: lighten($headerbar-background-colour, 10%);
+$list-active-text-colour: #f0f0f0;
+
+$footerbar-height: 0;
+
+// Library imports
+// Make sure these libraries are mixins only, no explicit styles
+@import "compass/css3";
+@import "compass/css3/user-interface"; // https://github.com/chriseppstein/compass/issues/759
+
+// Mixins
+@mixin text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin list-style-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
