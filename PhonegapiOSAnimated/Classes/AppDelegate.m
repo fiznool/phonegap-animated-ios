@@ -106,6 +106,7 @@
     }
     
     RootViewController *vc = [[[RootViewController alloc] init] autorelease];
+    vc.title = @"Animals";
     vc.view.backgroundColor = [UIColor whiteColor];
     [vc.view addSubview:self.viewController.view];
     
@@ -128,20 +129,29 @@
         RootViewController *vc = [[RootViewController alloc] init];
         vc.title = title;
         vc.view.backgroundColor = [UIColor whiteColor];
-        webViewHash = hash;
+        self.webViewHash = hash;
         [self.navigationController pushViewController:vc animated:YES];
     }
 }
 
 - (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)vc animated:(BOOL)animated {
     NSLog(@"Did show VC: %@", vc.title);
-    if (webViewHash == nil) {
+    if (self.webViewHash == nil) {
         [self.viewController.webView goBack];
     } else {
         // Route forward
-        [self.viewController.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"window.location.hash='%@';", webViewHash]];
+        NSString *command = [NSString stringWithFormat:@"window.jsapp.nav('%@');", webViewHash];
+        //NSString *command = @"setTimeout(function() { alert('hello!'); }, 0);";
+        NSLog(@"cordovaCmd: %@", command);
+        [self.viewController.webView stringByEvaluatingJavaScriptFromString:command];
     }
-    webViewHash = nil;
+    self.webViewHash = nil;
+    
+    // Give it a few ms to update the webview
+    [self performSelector:@selector(insertWebViewIntoViewController:) withObject:vc afterDelay:.1];
+}
+
+- (void)insertWebViewIntoViewController:(UIViewController *)vc {
     [vc.view addSubview:self.viewController.view];
 }
 

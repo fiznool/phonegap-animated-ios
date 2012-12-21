@@ -8,7 +8,7 @@
 
 #import "NativeBridge.h"
 
-@implementation NativeBridge
+@implementation NativeBridge 
 
 - (void)pushRoute:(CDVInvokedUrlCommand *)command {
     CDVPluginResult* pluginResult = nil;

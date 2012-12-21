@@ -30,6 +30,13 @@ define(function(require) {
     // Setup tappivate to mimic native button taps
     $('#app').tappivate();
 
+    // Add link to app in window so that native layer can trigger events
+    window.jsapp = {
+      'nav': function(hash) {
+        Backbone.history.navigate(hash, true);
+      }
+    };
+
     // Don't start routing until phonegap is ready.
     document.addEventListener('deviceready', function() {
       // Trigger the initial route, set the
