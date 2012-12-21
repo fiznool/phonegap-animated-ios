@@ -32,8 +32,11 @@ define(function(require) {
 
     // Add link to app in window so that native layer can trigger events
     window.jsapp = {
-      'nav': function(hash) {
+      'go': function(hash) {
         Backbone.history.navigate(hash, true);
+      },
+      'back': function() {
+        window.history.back(-1);
       }
     };
 
@@ -69,26 +72,22 @@ define(function(require) {
       evt.preventDefault();
 
       // Push to the native bridge to ask to navigate
-      var title = $(this).attr("data-nav");
       cordova.exec(
-      function(winParam) {
-        console.log('cordova.exec success');
-      }, function(error) {
-        console.log('cordova.exec error');
-      }, "NativeBridge", "pushRoute", [{
-        title: $(this).attr("data-nav"),
-        hash: href.attr
-      }]);
+        function(winParam) {},
+        function(error) {},
+        "NativeBridge",
+        "pushRoute",
+        [{
+          title: $(this).attr("data-nav"),
+          hash: href.attr
+        }]
+      );
 
       // `Backbone.history.navigate` is sufficient for all Routers and will
       // trigger the correct events. The Router's internal `navigate` method
       // calls this anyways.  The fragment is sliced from the root.
       //Backbone.history.navigate(href.attr, true);
     }
-  });
-
-  $(document).on("click", "[data-nav]", function(evt) {
-
   });
 
 });

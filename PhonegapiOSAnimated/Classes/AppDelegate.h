@@ -41,6 +41,5 @@
 @property (nonatomic, strong) IBOutlet UIWindow* window;
 @property (nonatomic, strong) UINavigationController* navigationController;
 @property (nonatomic, strong) IBOutlet CDVViewController* viewController;
-@property (nonatomic, strong) NSString* webViewHash;
 
 @end

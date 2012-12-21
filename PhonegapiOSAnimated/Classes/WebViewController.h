@@ -27,6 +27,6 @@
 
 #import <Cordova/CDVViewController.h>
 
-@interface MainViewController : CDVViewController
+@interface WebViewController : CDVViewController
 
 @end

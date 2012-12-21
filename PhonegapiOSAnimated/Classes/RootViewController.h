@@ -10,4 +10,9 @@
 
 @interface RootViewController : UIViewController
 
+@property (strong, nonatomic) NSString *webViewHash;
+
+- (id)initWithTitle:(NSString *)title;
+- (id)initWithTitle:(NSString *)title hash:(NSString *)hash;
+
 @end

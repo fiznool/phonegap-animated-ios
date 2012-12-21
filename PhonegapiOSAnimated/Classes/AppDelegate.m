@@ -26,13 +26,13 @@
 //
 
 #import "AppDelegate.h"
-#import "MainViewController.h"
+#import "WebViewController.h"
 
 #import <Cordova/CDVPlugin.h>
 
 @implementation AppDelegate
 
-@synthesize window, viewController, navigationController, webViewHash;
+@synthesize window, viewController, navigationController;
 
 - (id)init
 {
@@ -66,7 +66,7 @@
     self.window = [[[UIWindow alloc] initWithFrame:screenBounds] autorelease];
     self.window.autoresizesSubviews = YES;
 
-    self.viewController = [[[MainViewController alloc] init] autorelease];
+    self.viewController = [[[WebViewController alloc] init] autorelease];
     self.viewController.useSplashScreen = YES;
     self.viewController.wwwFolderName = @"www";
     self.viewController.startPage = @"index.html";
@@ -105,9 +105,7 @@
         [[UIApplication sharedApplication] setStatusBarOrientation:newOrient];
     }
     
-    RootViewController *vc = [[[RootViewController alloc] init] autorelease];
-    vc.title = @"Animals";
-    vc.view.backgroundColor = [UIColor whiteColor];
+    RootViewController *vc = [[[RootViewController alloc] initWithTitle:@"Animals"] autorelease];
     [vc.view addSubview:self.viewController.view];
     
     self.navigationController = [[[UINavigationController alloc] initWithRootViewController:vc] autorelease];
@@ -126,35 +124,39 @@
     NSString *title = [notification.userInfo objectForKey:@"title"];
     NSString *hash = [notification.userInfo objectForKey:@"hash"];
     if (title != nil && hash != nil) {
-        RootViewController *vc = [[RootViewController alloc] init];
-        vc.title = title;
-        vc.view.backgroundColor = [UIColor whiteColor];
-        self.webViewHash = hash;
+        RootViewController *vc = [[RootViewController alloc] initWithTitle:title hash:hash];
         [self.navigationController pushViewController:vc animated:YES];
     }
 }
 
 - (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)vc animated:(BOOL)animated {
-    NSLog(@"Did show VC: %@", vc.title);
-    if (self.webViewHash == nil) {
-        [self.viewController.webView goBack];
-    } else {
-        // Route forward
-        NSString *command = [NSString stringWithFormat:@"window.jsapp.nav('%@');", webViewHash];
-        //NSString *command = @"setTimeout(function() { alert('hello!'); }, 0);";
-        NSLog(@"cordovaCmd: %@", command);
-        [self.viewController.webView stringByEvaluatingJavaScriptFromString:command];
-    }
-    self.webViewHash = nil;
+
+    NSString *command;
     
-    // Give it a few ms to update the webview
-    [self performSelector:@selector(insertWebViewIntoViewController:) withObject:vc afterDelay:.1];
+    if ([vc isKindOfClass:[RootViewController class]]) {
+        // Case it so we can get the webViewHash out
+        RootViewController *rvc = (RootViewController *)vc;
+        
+        if (rvc.webViewHash != nil) {
+            // Route forward
+            command = [NSString stringWithFormat:@"window.jsapp.go('%@');", rvc.webViewHash];
+        } else {
+            // Go back
+            command = @"window.jsapp.back();";
+        }
+        
+        // Send to the webview
+        [self.viewController.webView stringByEvaluatingJavaScriptFromString:command];
+        
+        // Give it a few ms to update the webview before showing it
+        [self performSelector:@selector(insertWebViewIntoViewController:) withObject:rvc afterDelay:.1];
+    }
+    
 }
 
 - (void)insertWebViewIntoViewController:(UIViewController *)vc {
     [vc.view addSubview:self.viewController.view];
 }
-
 
 
 // this happens while we are running ( in the background, or from within our own app )
