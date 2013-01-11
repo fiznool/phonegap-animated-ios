@@ -145,6 +145,10 @@
             command = @"window.jsapp.back();";
         }
         
+        // Blank out the hash so when we go back to this VC
+        // it doesn't think to go forward!
+        rvc.webViewHash = nil;
+        
         // Send to the webview
         [self.viewController.webView stringByEvaluatingJavaScriptFromString:command];
         
